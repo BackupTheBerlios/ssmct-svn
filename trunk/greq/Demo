@@ -1,0 +1,73 @@
+#!/bin/bash
+PATH=./src:$PATH
+GREQ=`which greq 2>/dev/null`
+if [ -z $GREQ ]; then
+  echo "Couldn't find the greq executable. Maybe you should make it first?"
+  exit 1
+fi
+IFS=$'\v'		# fields are separated by CTRL-L
+$GREQ -t"greq Demo" -p 'Welcome to greq!' \
+       -p "greq lets you build simple graphical dialogs from within shell scripts."\
+       -p "We're now going to see a few examples of what is possible." \
+       -a -o"I'm all excited"
+
+#LINE=(`$GREQ -t"Test: Text Entry" -e"Some Text:"`)
+LINE=(`$GREQ -t"Test: Text Entry" -p "Some Text:" -e`)
+if [ $PIPESTATUS -eq 1 ]; then
+  echo "You cancelled the dialog."
+else
+  if [ -z $LINE ]; then
+    echo "You entered the empty string."
+  else
+    echo "The string you entered was $LINE"
+  fi
+fi
+
+LINE=`$GREQ -t "Test: List Choice" -p "Please select one option" \
+	-m Toliken Gandalf Gondor Goblin "Gil Galad"`
+if [ $PIPESTATUS -eq 1 ]; then
+  echo "You cancelled the dialog."
+else
+  echo "Your choice was: \"$LINE\""
+fi
+
+#LINE=(`$GREQ -mt "Test: Multiple Choice" -l "Select one or more options" \
+#	Sauron Saruman Silmaril Sindarin`)
+#if [ $PIPESTATUS -eq 1 ]; then
+#  echo "You cancelled the dialog."
+#else
+#  echo "You selected ${#LINE[@]} entries."
+#  if [ ${#LINE[@]} -gt 0 ]; then
+#    echo "They are: ${LINE[@]}"
+#  fi
+#fi
+
+LINE=(`$GREQ -t "A More Complex Example" -p"Establish Internet Connection?" \
+      -eUser: -d$USER -EPassword: -c"Remember this" -m Provider "Home Links" InterWorx 'Go! Home'`)
+if [ $PIPESTATUS -eq 1 ]; then
+  echo "You cancelled the dialog."
+else
+  if [ -z ${LINE[0]} ]; then
+    echo "You didn't enter a user name."
+  else
+    echo The username was: ${LINE[0]}
+  fi
+  if [ -z ${LINE[1]} ]; then
+    echo "You forgot the password."
+  else
+    echo You gave this password: ${LINE[1]}
+  fi
+  if [ ${LINE[2]} = "TRUE" ]; then
+    echo "You wanted me to save this information."
+  else
+    echo "You didn't want to save this."
+  fi
+  echo You chose provider ${LINE[3]}.
+fi
+
+$GREQ -t "Test: Boolean" -p "Did you like this demo?" -oYes -aNo
+if [ $PIPESTATUS -eq 0 ]; then
+  echo "Good, I'm glad you liked it."
+else
+  echo "Too bad! Please send me a patch with improvements."
+fi

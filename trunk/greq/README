@@ -1,0 +1,12 @@
+Greq -- A GTK+ Shell Tool
+=========================
+
+Greq is a program that lets you build GTK+-dialogs (or requesters in AMIGA
+lingo) from within a shell script. This is useful if you are writing shell
+scripts that need to get input from a user by way of a GUI. If you have any
+suggestions what other widgets I could implement in future versions of this
+program, please drop me a line.
+
+
+(C) Copyright 2002 by Felix Braun <Hazzl@developer.berlios.de>, see the file
+COPYING for licensing information.

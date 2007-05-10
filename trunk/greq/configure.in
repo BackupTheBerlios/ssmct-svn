@@ -1,0 +1,52 @@
+dnl Process this file with autoconf to produce a configure script.
+AC_INIT(src/greq.c)
+PACKAGE=greq
+MAJOR_VERSION=0
+MINOR_VERSION=9
+MICRO_VERSION=4
+EXTRA_VERSION=
+VERSION=$MAJOR_VERSION.$MINOR_VERSION.$MICRO_VERSION$EXTRA_VERSION
+AM_INIT_AUTOMAKE($PACKAGE, $VERSION)
+AC_SUBST(PACKAGE)
+AC_SUBST(VERSION)
+AM_CONFIG_HEADER(src/config.h)
+
+dnl Checks for programs.
+AC_PROG_CC
+AC_PROG_INSTALL
+AC_PROG_LN_S
+
+dnl Checks for header files.
+dnl Checks for typedefs, structures, and compiler characteristics.
+dnl Checks for library functions.
+AC_ARG_WITH(gtk,
+	[  --with-gtk=[version]	  which version of GTK+ to use ( 1.2 | 2.0 )],
+	[ac_cv_gtkversion=$withval], [ac_cv_gtkversion="2.0"])
+if test ! "$ac_cv_gtkversion" = "2.0"  -a  ! "$ac_cv_gtkversion" = "1.2"; then
+	AC_MSG_ERROR([You didn't specify a correct GTK+ version. 
+	  Use only "2.0" or "1.2".])
+fi
+	
+if test "$ac_cv_gtkversion" = "2.0"; then
+	AM_PATH_GLIB_2_0(2.0.0,,[AC_MSG_RESULT([
+GLIB 2.0 was not found. I will try for GLIB 1.2 later.
+])
+	  ac_cv_gtkversion="1.2"])
+	AM_PATH_GTK_2_0(2.0.0,,[AC_MSG_RESULT([
+GTK+ 2.0 was not found. I will try for GTK+ 1.2 later.
+])
+	  ac_cv_gtkversion="1.2"])
+fi
+if test "$ac_cv_gtkversion" = "1.2"; then
+	AM_PATH_GLIB(1.2.6,,
+          AC_MSG_ERROR(Test for GLIB failed. See the file 'INSTALL' for help.))
+	AM_PATH_GTK(1.2.6,,
+          AC_MSG_ERROR(Test for GTK failed. See the file 'INSTALL' for help.))
+fi
+
+AC_OUTPUT([
+	Makefile
+	greq.spec
+	src/Makefile
+	src/version.h
+])

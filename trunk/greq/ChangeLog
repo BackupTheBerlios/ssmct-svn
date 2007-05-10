@@ -1,0 +1,122 @@
+2002-04-29 18:46  Hazzl
+
+	* configure.in: new revision
+
+2002-04-29 18:45  Hazzl
+
+	* NEWS, greq.man, src/check_button.c, src/entry_field.c,
+	src/option_menu.c: added mnemonics for GTK+ 2.0
+
+2002-04-29 18:42  Hazzl
+
+	* greq.spec.in: corrected e-mail address
+
+2002-04-19 20:49  Hazzl
+
+	* src/greq.c: GTK+ 2.0 handles the input focus correctly, so we
+	don't need to set explicitly
+
+2002-04-19 19:58  Hazzl
+
+	* ChangeLog: Update ChangeLog
+
+2002-04-19 19:37  Hazzl
+
+	* NEWS, README, TODO, autogen.sh, ac/missing/glib-2.0.m4,
+	ac/missing/gtk-2.0.m4: Added detection for GTK+ 2.0
+
+2002-04-19 19:33  Hazzl
+
+	* INSTALL: Updated documentation
+
+2002-04-19 19:32  Hazzl
+
+	* configure.in: Added check for GTK+ 2.0
+
+2002-03-25 22:32  Hazzl
+
+	* src/: Makefile.am, local_options.mk: Added rule for assembly
+	files, GTK options
+
+2002-03-20 19:26  Hazzl
+
+	* Makefile.am, autogen.sh: include manual page into the
+	distribution
+
+2002-03-16 19:07  Hazzl
+
+	* ChangeLog, configure.in: Release Version 0.9.2
+
+2002-03-16 19:06  Hazzl
+
+	* Demo, NEWS, src/check_button.c, src/entry_field.c, src/greq.h,
+	src/okay_cancel.c, src/option_menu.c: Changed IFS from '\a' to '\v'
+
+2002-03-16 19:05  Hazzl
+
+	* TODO: Added GTK+ v2.0
+
+2002-03-16 19:04  Hazzl
+
+	* src/: greq.c, version.h.in: Added version information to usage
+	output
+
+2002-03-16 19:02  Hazzl
+
+	* greq.man: Updated manual
+
+2002-03-14 22:32  Hazzl
+
+	* ChangeLog, ChangeLog: [no log message]
+
+2002-03-14 22:30  Hazzl
+
+	* NEWS, TODO: release 0.9.1
+
+2002-03-14 18:16  Hazzl
+
+	* configure.in: release 0.9.1
+
+2002-03-14 18:14  Hazzl
+
+	* ChangeLog, Demo: Execute ./src/greq in preference
+
+2002-03-14 18:13  Hazzl
+
+	* Demo, src/check_button.c, src/entry_field.c, src/greq.h,
+	src/local_options.mk, src/option_menu.c: FIELD_SEPARATOR can't be
+	'\n' because bash collapses IFS whitespace
+
+2002-03-06 21:25  Hazzl
+
+	* Makefile, Makefile.in, aclocal.m4, config.cache, config.log,
+	config.status, configure, greq-0.9.0.tar.gz, greq.spec,
+	src/Makefile, src/Makefile.in, src/config.h, src/stamp-h,
+	src/stamp-h.in, src/version.h: removed unnecessary files
+
+2002-03-06 21:14  Hazzl
+
+	* Demo, NEWS, TODO, Makefile, aclocal.m4, README, config.status,
+	greq.man, greq.spec, config.cache, configure, configure.in,
+	autogen.sh, config.log, install-sh, Makefile.am, missing,
+	mkinstalldirs, AUTHORS, Makefile.in, INSTALL, ChangeLog,
+	greq-0.9.0.tar.gz, COPYING, greq.spec.in, src/Makefile,
+	src/check_button.c, src/okay_cancel.c, src/version.h.in,
+	src/Makefile.am, src/Makefile.in, src/config.h, src/config.h.in,
+	src/entry_field.c, src/greq.c, src/greq.h, src/local_options.mk,
+	src/option_menu.c, src/stamp-h, src/stamp-h.in, src/version.h:
+	Initial revision
+
+2002-03-06 21:14  Hazzl
+
+	* Demo, NEWS, TODO, Makefile, aclocal.m4, README, config.status,
+	greq.man, greq.spec, config.cache, configure, configure.in,
+	autogen.sh, config.log, install-sh, Makefile.am, missing,
+	mkinstalldirs, AUTHORS, Makefile.in, INSTALL, ChangeLog,
+	greq-0.9.0.tar.gz, COPYING, greq.spec.in, src/Makefile,
+	src/check_button.c, src/okay_cancel.c, src/version.h.in,
+	src/Makefile.am, src/Makefile.in, src/config.h, src/config.h.in,
+	src/entry_field.c, src/greq.c, src/greq.h, src/local_options.mk,
+	src/option_menu.c, src/stamp-h, src/stamp-h.in, src/version.h:
+	Imported sources
+

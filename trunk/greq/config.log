@@ -1,0 +1,30 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:580: checking for a BSD compatible install
+configure:633: checking whether build environment is sane
+configure:690: checking whether make sets ${MAKE}
+configure:736: checking for working aclocal
+configure:749: checking for working autoconf
+configure:762: checking for working automake
+configure:775: checking for working autoheader
+configure:788: checking for working makeinfo
+configure:810: checking for gcc
+configure:923: checking whether the C compiler (gcc  ) works
+configure:939: gcc -o conftest    conftest.c  1>&5
+configure:965: checking whether the C compiler (gcc  ) is a cross-compiler
+configure:970: checking whether we are using GNU C
+configure:979: gcc -E conftest.c
+configure:998: checking whether gcc accepts -g
+configure:1041: checking for a BSD compatible install
+configure:1094: checking whether ln -s works
+configure:1157: checking for pkg-config
+configure:1207: checking for GLIB - version >= 2.0.0
+configure:1429: checking for pkg-config
+configure:1477: checking for GTK+ - version >= 2.0.0
+configure:1720: checking for glib-config
+configure:1755: checking for GLIB - version >= 1.2.6
+configure:1854: gcc -o conftest -g -O2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include   conftest.c -L/usr/lib -lglib  1>&5
+configure:1986: checking for gtk-config
+configure:2021: checking for GTK - version >= 1.2.6
+configure:2122: gcc -o conftest -g -O2 -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include   conftest.c -L/usr/lib -L/usr/X11R6/lib -lgtk -lgdk -rdynamic -lgmodule -lglib -ldl -lXi -lXext -lX11 -lm  1>&5

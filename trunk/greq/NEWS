@@ -1,0 +1,15 @@
+0.9.4
+     Added support for mnemonics in GTK+ 2.0
+0.9.3
+     Added detection of GTK+ 2.0
+0.9.2
+     Oops! I decided to change the IFS again because '\a' is an audible bell
+     which is probably unexpected if output. The IFS now is '\v'. Another
+     breakage results. Sorry.
+0.9.1
+     !!!!!ATTENTION!!!!
+     Because bash collapses all occurrences of IFS whitespace, the output
+     format of greq has changed in this version to use '\a' as its IFS.
+     This means that all scripts that rely on prior versions will have to
+     be changed. Fortunately, as this is only the second public release,
+     I hope that the breakage will not be too bad ;-)

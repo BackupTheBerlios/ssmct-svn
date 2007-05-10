@@ -1,0 +1,87 @@
+.TH GREQ 1x "16/Mar/2002" "" "GReq Manual Page"
+.SH NAME
+GReq \- build GTK+-requesters from shell scripts
+.SH SYNOPSIS
+.BI "greq -h | -?"
+
+.BI "greq [-t "<window\ title> "] [-p "<text\ prompt> "] [-(e | E) ["<entry\ label> "] [-d "<default\ value> "]] [(-c | -C) "<checkbox\ label> "] [-m "<menu\ label>\ <menu\ item>... "] [-o "<OK\ label> "] [-a ["<abort\ label> "]]
+
+.SH DESCRIPTION
+.I GReq 
+is a program that lets you create GTK+ dialogs from within shell
+scripts. If you are writing a shell script that needs input from a user that
+would have trouble handling a command line interface, this tool may be what
+you are looking for.
+
+.SH OPTIONS
+.IP -?/-h
+Give some usage information and then quit.
+
+.IP -t 
+The title of the dialog window. If this option is not used, the title of the
+window is decided by the window manager.
+
+.IP -p 
+Adds a paragraph of text to the requester. The text will be broken
+into lines automatically, which will be centered.
+
+.IP -e/E 
+Adds a text entry field. This option may be followed by an optional label
+for the field.  If the label contains an underscore, the letter following it
+will be underlined and a keyboard shortcut will be created (only with
+GTK+2.0).  If -E is used, the text the user enters into the field will be
+hidden (for password fields).
+
+.IP -c/-C 
+Adds a checkbox to the window using the given label. If the label contains
+an underscore, the letter following it will be underlined and a keyboard
+shortcut will be created (only with GTK+2.0). If -C is used, the checkbox is
+checked by default, if -c is used it is unchecked. The status of the
+checkbox is returned on standard out as 'TRUE' or 'FALSE'.
+
+.IP -m 
+Adds a pop-up menu to the requester. This option requires at least two
+arguments. The first one will be used as the label for the menu. If the
+label contains an underscore, the letter following it will be underlined and
+a keyboard shortcut will be created (only with GTK+2.0).  The following
+arguments will be the different menu items. A menu item may not start with a
+'-' character.
+
+.IP -o 
+The label used for the OK button. If this option is not used, this button
+will be labeled " OK ".
+
+.IP -a
+The label used for the abort button. If the option is not used, this button
+will be labeled " Cancel ". If this option is given but not followed by an 
+argument, the abort button is omitted altogether.
+
+.SH RETURN VALUE
+.I GReq
+returns the values of the entry fields separated by '\\v' (0x0B) on
+standard output. If no error occured, the return value is set to 0. If the
+requester is cancelled or the window is closed there is no output, and the 
+return value is set to 1. If there is an error in greq's command line
+options the return value is set to 2. If 
+.I GReq 
+can't allocate enough memory it sets the return value to 3.
+
+.SH EXAMPLES
+
+	#!/bin/sh
+.br
+	IFS=$'\\v'
+.br       
+	val=`greq -e "Number: "`
+.br
+	system=`greq -m "Select an item" "Linux" "Free BSD"`
+
+.SH AUTHOR 
+Felix Braun <Hazzl@developer.berlios.de>
+
+.I GReq
+was inspired by
+.I XAsk
+which was written by Rasca <thron@gmx.de> and is available on 
+http://home.pages.de/~rasca/
+.br 
