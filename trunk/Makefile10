@@ -1,0 +1,9 @@
+smct_bscw: smct_bscw.o
+	gcc $(CFLAGS) -o smct_bscw smct_bscw.o
+	
+smct_bscw.o: smct_bscw.c
+	gcc $(CFLAGS) -c smct_bscw.c
+
+clean:
+	rm -f *.o smct_bscw
+

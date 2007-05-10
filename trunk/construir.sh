@@ -15,6 +15,10 @@ make -f Makefile7
 mv muestra_corr1 /usr/local/bin/muestra_corr1
 make -f Makefile8
 mv smct_demo /usr/local/bin/smct_demo
+make -f Makefile9
+mv smct_clase /usr/local/bin/smct_clase
+make -f Makefile10
+mv smct_bscw /usr/local/bin/smct_bscw
 gcc -o funciones main.c callbacks.c support.c interface.c `gtk-config \
 --cflags --libs`
 mv funciones /usr/local/bin/funciones
