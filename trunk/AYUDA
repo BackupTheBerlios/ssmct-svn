@@ -1,0 +1,431 @@
+|[b]Formato de los ficheros de textos a preparar por el profesor[b]|
+
+Los ficheros de textos que contituyen los tests o fichas de clase
+deben respetar en todos los casos el siguiente formato:
+
+En todo los casos la separación entre preguntas es de una línea en
+blanco.
+
+Veamos un ejemplo de un test de Respuestas Simples,
+
+	1.     // Esta debe ser la primer línea del fichero
+Quién descubrió América.
+               // Está en blanco 
+	2.
+Cuál es la capital de Perú.
+               // Está en blanco
+	3.
+Cuál es la moneda en en EEUU.
+               // Esta es la última línea del fichero
+
+Son tres preguntas y tres líneas en blanco, se entiende por línea
+en blanco aquella que no tiene ningún caracter.
+
+Veamos un ejemplo de un Test de Selección Múltiple,
+
+1.
+¿Quién descubrió América?
+   a. Cristobal Colón.
+   b. Magallanes.
+   c. Drake.
+
+2.
+¿Cuál es la capital de Perú?
+   a. Bogotá.
+   b. Ginebra.
+   c. ninguna de las anteriores.
+
+3.
+¿Cuál es la moneda en en EEUU?
+	a. Euro.
+        b. Dolar.
+        c. Peso.
+        d. Franco.
+               // Esta es la última línea del fichero
+
+Como se observa el número de opciones puede variar en cada pregunta.
+En este caso se necesita un segundo fichero de texto que contenga 
+las opciones, las que el alumno de forma gráfica seleccionará.
+Para nuestro ejemplo el fichero de opciones debería contener:
+
+a
+b
+c
+
+a
+b
+c
+
+a
+b
+c
+d
+
+Debe respetarse la separación de línea en blanco entre el grupo de
+opciones de cada pregunta. Las opciones tal como se ponen aquí serán
+visualizadas por los alumnos.
+
+El formato para Exámenes es igual al de Respuestas Simple, de un
+único fichero de texto, la diferencia es para quien contesta, que en
+el caso de Exámenes dispone de más espacio para contestar, como si
+se tratara de un folio en blanco, mientras que en Respuestas Simples,
+el espacio se reduce a unas pocas palabras en una línea.
+
+El tipo de trabajo de Presentación se compone de tres ficheros.
+El tipo Presentación equivale a un conjunto de entradas sobre las que
+se desea dar información de dos tipos diversos, por ejemplo, las entradas
+podrían ser nombre de paises, y los dos tipos de información podrían 
+ser capital y moneda del país.
+
+Ejemplo del contenido de los ficheros
+Fichero 1 -de entradas-
+
+India
+
+EEUU
+
+España
+
+Fichero 2 -información 1-
+
+Nueva Delhi
+
+Washington
+
+Madrid
+
+Fichero 3 -información 2-
+
+Rupia
+
+Dolar
+
+Euro
+
+En el tipo Presentación es posible recoger texto que escriba
+el alumno, para ello basta con hacer editable la entrada, esto 
+se indica insertando un caracter asterisco seguido de espacio
+en la entrada que deseamos sea editable para el alumno. Solo 
+es posible editar el texto que contenido en la información
+del tipo -2-. Ejemplo,
+
+Fichero de entradas:
+
+Tema 1
+
+* Tema 2
+
+Tema 3
+
+------------------
+Fichero de información -1-:
+
+Enunciado 1
+
+Enunciado 2
+
+Enunciado 3
+
+------------------
+Fichero de información -2-:
+
+Ejercicio  ejemplo  -1-
+
+Ejercicio a resolver -2-  //Es editable luego puede escribir nuevo textos
+
+Ejercicio  ejemplo  -3-
+
+Por último, es necesario agregar más información el el fichero de entradas,
+esta consiste en seis etiquetas que serán los títulos de las distintas
+zonas de pantalla, estas deben escribirse una por línea en las seis
+primeras líneas del fichero de entradas. Veamos un ejemplo de estas líneas
+
+Fichero de entradas:
+----Comienza el Fichero--------
+Repaso de Capitales y Moneda de Paises  //este es el nombre de la ventana
+Un nombre de país  // es el título del espacio a rellenar
+Capital  //Etiqueta del botón de la izquierda
+Moneda   //Etiqueta del botón derecho
+Su Capital es // Es el título de la segunda zona de la ventana
+Su Moneda es  // Es el título de la segunda zona de la ventana
+
+Brasil
+
+Perú
+
+Suiza
+
+Noruega
+
+----Fin del Fichero----
+
+El tipo Fichas/Cuestionario sirve para hacer llegar a los alumnos
+temas de clase, tal vez presentado con una explicación, una pregunta
+y una respuesta, y al final hacer contestar un cuestionario de
+preguntas de Respuestas Simples. Existe un único fichero cuyo formato
+podría ser el siguiente,
+
+Explicación -1-
+Pregunta -1-
+
+Respuesta -1-
+Alguna aclaración -1-
+
+Explicación -2-
+Pregunta -2-
+
+Respuesta -2-
+Alguna aclaración -2-
+
+Donde las líneas en blanco son líneas sin caracteres. 
+Con el fichero descrito, el alumno verá inicialmente la explicación
+y pregunta -1-, luego pasará a ver la respuesta y aclaración -1-, 
+sin dejar de visualizar el texto de la pregunta correspondiente, luego
+pasará a la pregunta -2- y con el próximo click verá la respuesta -2-.
+Pueden haber el número de temas que se desee, en nuestro caso se han
+presentado dos; si se desea recoger las respuestas de un cuestionario,
+como ya se ha indicado, esto es posible, en ese caso es necesario
+agregar las preguntas de Respuestas Simples al final del fichero luego
+de una línea que solo contenga un asterisco. Ejemplo,
+
+Tema 1
+...
+...
+
+Respuesta al Tema 1
+...
+...
+
+Tema 2
+...
+...
+
+Respuesta al Tema 2
+...
+
+*
+
+Pregunta a responder por al alumno -1-
+
+Pregunta a responder por al alumno -2
+
+Pregunta a responder por al alumno -3
+
+En este caso el alumno verá:
+Tema 1 -click- 
+Tema 1 más Respuesta al Tema 1 -click-
+Tema 2 -click-
+Tema 2 más Respuesta al Tema 2 -click-
+Pregunta para responder con Respuesta Simple 1 -click-
+Pregunta para responder con Respuesta Simple 2 -click-
+Pregunta para responder con Respuesta Simple 3 -click-
+Finaliza
+
+|[b]Nombres de los ficheros:[b]|
+
+En todos los Respuestas Simple, Exámenes y Fichas/Cuestionario el
+fichero a preparar es sólo uno y el nombre puede ser cualquiera,
+como por ejemplo test1, preg1, examen1, etc.
+En el caso del tipo Test hay que preparar además el fichero de
+opciones, el nombre de este debe ser como el de las preguntas
+antecedido de 'op_', luego si el nombre del fichero que contiene
+las preguntas del test es 'tema5', el fichero de opciones debe
+llamarse 'op_tema5'.
+Para el tipo Presentación los nombres del segundo y tercer fichero
+será como el adoptado en el fichero de entradas agregando '.a' y
+'.b' respectivamente, entonces si las entradas están en 'clase4',
+los otros nombres deben ser 'clase4.a' y 'clase4.b'
+
+|[b]Poner en marcha el Servidor:[b]|
+
+Al ejecutar ssmct es necesario especificar ciertos parámetros los
+que el programa tendrá en cuenta y determinarán su conducta.
+Analicemos cada uno,
+	Puerto: 14500
+Aparece 14500 y podemos optar por no cambiarlo.
+	Nombre del Trabajo:
+Aquí debe escribirse el nombre del fichero que contiene el trabajo
+(test, Respuestas simples, Examen, etc).
+Los tres datos siguientes:
+	Cuántas preguntas a la vez.
+	Con verificación al final.
+Se rellenan solo en caso de trabajos tipo Test, y en caso que se
+desee que el alumno en este tipo de trabajo vea más de una pregunta
+por vez y además se le proporcione la posibilidad de cambiar alguna
+respuesta al final cuando haya acabado de responder la totalidad
+de las preguntas.
+	Ver la corrección:
+Si se indica que si (basta con el caracter 's'), el alumno podrá,
+ver las respuestas y correciones del trabajo ya realizado. El 
+alumno ejecuta el programa cliente 'smct', y deberá indicar a este
+que ejecute con el objeto de ver correcciones.
+Debe ser un trabajo ya realizado por el alumno, y corregido por el
+profesor (en los aquellos 'tipos' que sea necesaria su intervención),
+para que este parámetro se relene con 's'.
+	Con opciones:
+Solo se rellena con si, en el tipo Test y cuando no se hayan colocado
+las opciones en el fichero de preguntas, además este aspecto solo
+se tiene en cuenta cuando ssmct se ejecuta para mostrar correciones
+('Ver corrección' con valor si).
+En nuestro ejemplo de más arriba de un tipo Test, hemos distribuido 
+las opciones entre los dos ficheros, el primero las describe y el
+segundo (cuyo nombre comienza con op_) solo indica con una letra,
+cada una de las opciones, luego no debemos rellenar con valor 'si'
+el parámetro 'Con opciones', de otra manera, ssmct agregaría las
+opciones (a, b, c) a cada pregunta, lo que sería redundante.
+	Tipo de Trabajo:
+Se escoge el tipo al que corresponde el trabajo, cuyo fichero ha
+sido nombrado en el parámetro 'Nombre del Trabajo'
+
+
+|[b]Procedimiento para generar las correcciones[b]|
+
+A continuación se describe el procedimiento a seguir para conseguir
+corregir trabajos, se analiza cada tipo por separado.
+
+Tipo Test:
+---------
+
+1. El profesor debe introducir las Respuestas correctas como un 
+usuario más, identificándose mediante la ventana de diálogo que
+muestra el programa cliente 'smct' (que ejecutan los alumnos), con
+el nombre 'Respuestas' (primera letra debe ser mayúscula).
+
+2. Se ejecuta ssmct_util y se elige Generar Respuestas.
+Arribando a este punto ya se tiene todo para mostrar las correcciones
+a los interesados. Es decir que en este tipo de trabajo la intervención
+del profesor se reduce a introducir las respuestas correctas y a su
+vez lo hace utilizando el mismo método que los demás alumnos.
+
+3. Se puede ejecutar ssmct para 'Mostrar las correcciones'.
+
+Tipo Respuestas Simples:
+-----------------------
+
+1. Igual al punto 1 del tipo Test.
+
+2. Igual al punto 2 del tipo Test.
+
+3. Con el punto 2 no se tiene todo, es necesario ejecutar ssmct_util
+y elegir 'Repasar Respuestas', se debe indicar el nombre del trabajo.
+A partir de ahí aparecerán los textos de respuestas escritas por
+alumnos que hicieron el trabajo y que no coinciden exáctamente con las
+respuestas introducidas por el profesor (punto 1). Si hubiera más de
+una respuesta igual aparecerá sólo una.
+Lo que se consigue con este paso, es generar un conjunto de respuestas
+que se pueden considerar correctas, para ello con el botón agregar, el
+profesor va seleccionando respuestas válidas, al acabar las respuestas
+válidas para una pregunta, pasa a la siguiente, mediante el botón
+Siguiente. Para Cancelar (ya que no hay botón) se debe pulsar Terminar
+más Agregar, con lo cual se pierde lo realizado. Para conseguir los
+cambios sean efectivos es necesario llegar hasta la última pregunta
+mediante el botón Siguiente y así terminar.
+
+4. Cómo en el punto 3 del tipo Test, ya se puede ejecutar ssmct con
+el parámetro 'Mostrar las correcciones' con valor 's'.
+
+Tipo Examen:
+-----------
+
+1. Ejecutar ssmct_util y elegir la opción 'Ver Examenes'.
+En este paso el profesor corrige los trabajos, para ello puede optar
+de corregir un trabajo completo y pasar al siguiente y así sucesivamente
+hasta terminar, o bien puede corregir de todos una pregunta previamente
+seleccionada ó incluso podría elegir el trabajo de un alumno determinado
+y corregir solo ese.
+
+2. Acción de corregir.
+Cualquiera sea la opción elegida anteriormente (por preguntas, trabajo
+completo ó por nombre), el profesor va a visualizar una pregunta por
+vez y tendrá a su disposición introducir cualquier tipo de texto a
+modo de corrección, ya que es editable cada respuesta por la que irá
+pasando.
+También existe la posibilidad de dar un código de corrección, uno a
+elegir entre r,r-,r+,n,b, esto no tiene ninguna repercución en la
+visualización que el alumno haga del trabajo corregido, una vez
+el profesor ejecute ssmct con el parámetro 'Ver correciones'. 
+El alumno verá el texto de correción que inserta el profesor.
+Los textos a insertar también pueden ser en color azul, rojo o verde
+para ello debe utilizarse los caracteres |[] para comenzar y []| para
+terminar, entre los corchetes va el código del color, pudiendo ser 'r'
+para rojo, 'g' para verde y 'b' para azul, [r] [g] y [b].
+Las frases pueden ser de varias líneas.
+
+3. Como en el último punto de los tipos anteriores, el trabjo una
+vez corregido, puede colocarse para ser visualizado por los interesados.
+
+Tipo Ficha/Cuestionario:
+-----------------------
+
+1. Los trabajos de este tipo pueden contener un cuestionario al
+final, en tal caso éste es el que se debe corregir. En el caso que
+el trabajo no lleva un cuestionario adicional, obviamente no hay nada
+que corregir.
+Si hay un cuestionario, una vez resuelto, el trabajo se considera
+igual a un tipo Respuestas Simples, con lo cual las acciones a seguir
+son las mismas que en ese tipo, así pues el profesor debe introducir
+las respuestas identificándose como Respuestas y luego ejecutar la 
+secuencia de pasos descrita en el tipo Respuestas Simples.
+
+Tipo Presentación:
+-----------------
+
+1. Al igual que en el tipo anterior, si el trabajo se diseño sin dar
+acceso a introducción de texto por parte del alumno, es decir que no
+hay posibilidad de edición en ninguno de los temas ó entradas del 
+primer fichero (ninguna de las entradas comienza con '* '), entonces 
+no hay nada que corregir.
+Si es el caso en que hubo entradas que permiten edición en la información
+del tipo 2 (aquella contenida en el segundo fichero), es necesario
+corregir, para ello se debe seguir la secuencia de pasos descrita
+para el tipo Examen, ya que la corrección se debe practicar en un
+texto de varias líneas, como en el tipo Examen. Luego se continúa con
+la ejecución de ssmct_util, seleccionando 'Ver exámenes', y al llegar
+a la elección de como se desea la corrección, aquí no está operativa,
+(aunque este habilitada), la opción 'Por Preguntas', luego será causa
+de error si esta opción se elige, por consiguiente la elección de como
+efectuar la corrección se reduce a las dos opciones 'por trabajo completo'
+y 'por nombre'.
+
+|[b]Obtener estadísticas y visualización de trabajos con ssmct_util[b]|
+
+Ejecutando ssmct_util y seleccionando 'Corregir todos' será posible
+obtener una estadística de un trabajo previamente realizado por los
+alumnos y solo para trabajos tipo Test y tipo Respuestas Simples.
+
+También y solo para trabajos tipo Test y Respuestas Simples, se 
+permite una visualización de un trabajo corregido dando un nombre.
+Se debe seguir la opción 'Mostrar un Corregido' de ssmct_util.
+
+|[b]Ejecutar smct[b]|
+
+Mediante smct se recibe y se envía información al servidor ssmct.
+smct es un visualizador de aquello que envía el servidor, y mantiene
+interactividad con el alumno, recoge información introducida por
+el alumno y envía al servidor.
+Hay que tener en cuenta para ejecutar smct los siguientes aspectos,
+
+- La dirección IP de la máquina que ejecuata el servidor, este dato
+  debe indicarlo el profesor al resto de la clase.
+- El puerto del servidor por el cual comunica con el el cliente smct.
+- Cuando el profesor prepara el servidor para que los alumnos vean
+  las correciones de los trabajos, es decir se ha utilizado el parámetro
+  'Ver la Correción' en el servidor, el alumno debe ejecutar smct y 
+  además de rellenar dirección IP y puerto del servidor, debe pulsar
+  'Ver la corrección de un Trabajo'.
+- Cuando el profesor prepara y ejecuta el servidor con un trabajo
+  tipo Ficha/Cuestionario, el alumno debe ejecutar smct activando
+  'Ver temas de clase'.
+  Es el profesor quien debe de comunicar estas dos últimas situaciones.
+- La opción 'Con pasword' de smct no está operativa, no teniendo
+  ningún efecto si se activa.
+- Cuando el servidor ha sido ejecutado con el tipo Presentación, y
+  es un trabajo del que se espera recoger resoluciones del alumno,
+  es decir que contiene entradas editables, el aspecto de la interfaz
+  de smct cambia y el alumno encontrará el equivalente a un folio
+  para escribir la resolución que se le pide, la resolución es enviada
+  al servidor, en el momento de cerrar la ventana (no hay ningún botón
+  de enviar ni OK).
+
+
+

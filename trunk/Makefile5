@@ -1,0 +1,8 @@
+muestra2: muestra2.o
+	gcc $(CFLAGS) -o muestra2 muestra2.o
+	
+muestra2.o: muestra2.c
+	gcc $(CFLAGS) -c muestra2.c
+
+clean:
+	rm -f *.o muestra2

@@ -1,0 +1,132 @@
+En este documento 'smct' refiere al nombre de la aplicación completa.
+
+En los ordenadores, que utilizan los alumnos dentro del aula solo
+deben instalarse tres programas ejecutables:
+	smct
+	funciones
+	greq
+Y los alumnos siempre y solamente ejecuatarán 'smct'.
+
+Mientras que el ordenador que utiliza el profesor, uno más de la
+red de ordenadores del aula, necesita además de estos tres, otros
+ficheros ejecutables y de textos que a continuación se describe
+el procedimineto para su construcción.
+
+La instalación de smct comporta los siguientes pasos:
+====================================================
+
+Como usuario root,
+
+1.-
+smct tiene dependencia de GTK+ y la herramienta 'greq'.
+Comprobar que está instalado en tu sistema GTK+; la interfaz gráfica
+de smct utiliza estas librerías, de no estar este conjunto de 
+librerías 'greq' no se va a poder construir, con lo cual puedes
+leer en el -punto 4- una posible decisión.
+
+Verifica que existe el directorio /usr/local/bin, es allí donde el
+shell script 'construir.sh' dejará los programas ejecutables que
+constituyen la aplicación.
+
+2.-
+El código fuente está separado en dos ficheros y ambos se necesitan
+para poder construir y ejecutar smct.
+Estos dos fichero son:
+	 smct.tar.gz
+         greq.tar.gz
+puedes crear para ello el directorio smct en /usr/src o donde
+creas más conveniente, se encuentre el código fuente de smct.
+Y, convenientemente en otro directorio, deberías copiar el
+código fuente de greq.
+Una vez copiados desde el soporte magnético y suponiendo que los
+has copiado en /usr/src/smct y /usr/src/greq, ejecuta
+        cd /usr/src/smct
+	gunzip smct.tar.gz
+        tar xvf smct.tar
+y lo mismo con greq.tar.gz
+	cd /usr/src/greq
+        gunzip greq.tar.gz
+        tar xvf greq.tar
+
+3.-
+Construir smct y greq.
+Para construir 'greq' los pasos son los mismos que utilizas para construir la
+mayoría de herramintas de Software Libre, y con los que ya puedes estar
+familiarizado:
+	cd /usr/src/greq
+	./configure
+        make
+        make install
+(También puedes consultar el fichero INSTALL en /usr/src/greq)
+En este punto podrás comprobar que el último paso ha conseguido
+el fichero ejecutable /usr/local/bin/greq
+
+Para construir 'smct' lo hacemos mediante el shell script
+llamado 'construir.sh' y que se encuentra en /usr/src/smct
+Entonces:
+	cd /usr/src/smct
+        ./construir.sh
+y luego podrás comprobar que se crearon varios ficheros en
+/usr/local/bin, algunos ejecutables y otros de textos de los
+cuales varios son scripts awk.
+
+Aquí termina la instalación en la máquina que utilizará el 
+profesor, en esta ya se pueden ejecutar, desde una terminal
+gráfica, ssmct, smct y ssmct_util, los tres comandos que
+utiliza el profesor para: 
+    - Poner en marcha el servicio.                  ----> ssmct
+    - Introducir respuestas de cuestionarios.       ----> smct
+    - Comprobar como verán los alumnos los trabajos.----> smct
+    - Corregir los mismos.                          ----> ssmct_util
+
+En el resto de las máquinas de la "red del aula" basta con instalar
+los comandos que utiliza la parte cliente de la aplicación, estos
+son los comandos smct, greq y funciones.
+Estos tres programas ejecutables una vez creados en /usr/local/bin
+en la máquina del profesor (la que ejecutará el servidor ssmct),
+pueden, mediante una sesión sftp, copiarse en /usr/local/bin
+en cada una de las máquinas del aula, o bien mediante el método
+que consideres oportuno como el de utilizar una copia desde un
+soporte magnético.
+
+4.-
+En el soporte magnético junto a los ficheros 
+	smct.tar.gz 
+        greq.tar.gz
+también viene
+	smct_ex.tar.gz
+este último contiene los ficheros que deberían copiarse en /usr/local/bin
+en el caso que con los pasos anteriores no se haya logrado la construcción
+correcta de smct o cualquiera de sus dependencias, podrías intentar,
+(por intentarlo no se pierde nada).
+        copiar desde el soporte smct_ex.tar.gz en /usr/local/bin
+	cd /usr/local/bin
+        gunzip smct_ex.tar.gz
+        tar xvf smct_ex.tar
+Verificar que ejecutan correctamente los tres comandos:
+(siempre desde una terminal gráfica)
+	- ssmct
+	- smct
+	- ssmct_util
+Si el intento es fructífero, has logrado ejecutar correctamente
+la aplicación pero no la puedes construir desde el código fuente,
+lo cual es una situación muy incómoda, para el modelo de Software
+Libre. En este punto deberías recurrir a ......... Email: .....
+Cómo smct concurre al Premio Antonio Domínguez Ortiz, esta 
+comunicación no puede llevarse a cabo, pero por ahí irían los tiros.
+
+5.-
+Ha terminado la función de usuario root y comienza la del usuario
+profesor o similar.
+
+EJEMPLOS
+========
+Una vez instalado smct, en los ordenadores de la red del aula
+puedes dedicarte a ejecutar los trabajos de ejemplos que han sido
+puestos en el último fichero:
+	ejemplos.tar.gz
+este fichero puedes copiarlo en un directorio de usuario del tipo
+/home/profesor/smct/ejemplos o donde creas conveniente.
+Lee el fichero de texto texto README incluido en ejemplos.tar.gz
+y lee la Ayuda de smct, llegas a ella ejecutando,
+	ssmct -show

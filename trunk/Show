@@ -1,0 +1,24 @@
+#!/bin/bash
+PATH=./src:$PATH
+GREQ=`which greq 2>/dev/null`
+if [ -z $GREQ ]; then
+  echo "¿Podría no estar greq ejecutable?"
+  exit 1
+fi
+IFS=$'\v'		# campos son separados por CTRL-L
+$GREQ -t"Acerca de ssmct" -p 'Bienvenido a ssmct!' \
+       -p "ssmct te permite construir distintos tipos de tests, que tus alumnos podrán responder mediante ventanas de diálogos, y te asiste en la tarea de corrección y en la entrega de las mismas."\
+       -p "  " \
+       -a -o"Continúo ¡Parece interesante!"
+LINE=`$GREQ -t "Acerca de ssmct" -p "ssmct es el servidor y smct el cliente" \
+        -p "el servidor lo prepara y arranca el profesor, y los alumnos" \
+        -p "van visualizando los trabajos con el cliente smct." \
+	-p "Con ssmct_util obtienes estadísticas y corriges" \
+       -a -o"Autor y Garantía"`
+LINE=(`$GREQ -t "Condiciones para Copiar ssmct y (no)Garantía" -X"Autor: (C) Paulino Huerta Sanchez" \
+     -Z"\`cat /usr/local/bin/COPYING\`" \
+       -a -o"Ayuda"`)
+
+LINE=(`$GREQ -t "Ayuda" -X"Crear ficheros, sus nombres, ejecutar el Servidor, ejecutar el Cliente y realizar las Correcciones" \
+     -Z"\`cat /usr/local/bin/AYUDA\`"`)
+

@@ -1,0 +1,8 @@
+smct: smct.o
+	gcc $(CFLAGS) -o smct smct.o
+	
+smct.o: smct.c
+	gcc $(CFLAGS) -c smct.c -o smct.o
+
+clean:
+	rm -f *.o smct

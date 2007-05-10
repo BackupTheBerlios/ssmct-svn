@@ -1,0 +1,9 @@
+muestra_corr1: muestra_corr1.o
+	gcc $(CFLAGS) -o muestra_corr1 muestra_corr1.o
+	
+muestra_corr1.o: muestra_corr1.c
+	gcc $(CFLAGS) -c muestra_corr1.c
+
+clean:
+	rm -f *.o muestra_corr1
+
