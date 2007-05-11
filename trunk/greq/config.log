@@ -14,7 +14,6 @@ configure:923: checking whether the C compiler (gcc  ) works
 configure:939: gcc -o conftest    conftest.c  1>&5
 configure:965: checking whether the C compiler (gcc  ) is a cross-compiler
 configure:970: checking whether we are using GNU C
-configure:979: gcc -E conftest.c
 configure:998: checking whether gcc accepts -g
 configure:1041: checking for a BSD compatible install
 configure:1094: checking whether ln -s works
@@ -27,4 +26,4 @@ configure:1755: checking for GLIB - version >= 1.2.6
 configure:1854: gcc -o conftest -g -O2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include   conftest.c -L/usr/lib -lglib  1>&5
 configure:1986: checking for gtk-config
 configure:2021: checking for GTK - version >= 1.2.6
-configure:2122: gcc -o conftest -g -O2 -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include   conftest.c -L/usr/lib -L/usr/X11R6/lib -lgtk -lgdk -rdynamic -lgmodule -lglib -ldl -lXi -lXext -lX11 -lm  1>&5
+configure:2122: gcc -o conftest -g -O2 -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include   conftest.c -L/usr/lib -L/usr/X11R6/lib -lgtk -lgdk -rdynamic -lgmodule -lglib -ldl -lXi -lXext -lX11 -lm  1>&5

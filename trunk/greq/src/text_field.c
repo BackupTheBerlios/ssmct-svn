@@ -2,6 +2,7 @@
  * see greq.c for copyright information
  */
 
+#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <gtk/gtk.h>

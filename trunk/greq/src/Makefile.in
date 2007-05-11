@@ -73,7 +73,8 @@ PACKAGE = @PACKAGE@
 PKG_CONFIG = @PKG_CONFIG@
 VERSION = @VERSION@
 bin_PROGRAMS = greq
-greq_SOURCES = greq.c check_button.c entry_field.c okay_cancel.c 	       option_menu.c greq.h
+greq_SOURCES = greq.c check_button.c entry_field.c okay_cancel.c option_menu.c \
+combo_field.c text_field.c paned.c greq.h
 
 MOSTLYCLEANFILES = *~ *.s
 MAINTAINERCLEANFILES = Makefile.in stamp-h.in
@@ -89,7 +90,7 @@ DEFS = @DEFS@ -I. -I$(srcdir) -I.
 CPPFLAGS = @CPPFLAGS@
 LIBS = @LIBS@
 greq_OBJECTS =  greq.o check_button.o entry_field.o okay_cancel.o \
-option_menu.o
+option_menu.o combo_field.o text_field.o paned.o
 greq_LDADD = $(LDADD)
 greq_DEPENDENCIES = 
 greq_LDFLAGS = 

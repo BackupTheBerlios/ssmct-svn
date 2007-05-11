@@ -2,6 +2,8 @@
  * see greq.c for copyright information
  */
 
+#include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
 #include <gtk/gtk.h>
 #include <glib.h>
@@ -55,7 +57,7 @@ void last_combo_default (gchar *text)
          st[j]=text[i];
        else {
          st[j]='\0';
-         p=(gchar *)malloc(strlen(st)+1);
+         p=(gchar *)malloc((strlen(st))+1);
          strcpy(p,st);
 	 if(p[strlen(p)-1]=='^') {
 	    p[strlen(p)-1]='\0';

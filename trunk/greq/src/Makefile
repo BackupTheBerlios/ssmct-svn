@@ -40,9 +40,9 @@ pkgincludedir = $(includedir)/greq
 
 top_builddir = ..
 
-ACLOCAL = aclocal
+ACLOCAL = /home/smct/trunk/greq/missing aclocal
 AUTOCONF = autoconf
-AUTOMAKE = automake
+AUTOMAKE = /home/smct/trunk/greq/missing automake
 AUTOHEADER = autoheader
 
 INSTALL = /usr/bin/install -c
@@ -64,16 +64,17 @@ GLIB_GENMARSHAL =
 GLIB_LIBS = -L/usr/lib -lglib
 GLIB_MKENUMS = 
 GOBJECT_QUERY = 
-GTK_CFLAGS = -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include
+GTK_CFLAGS = -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include
 GTK_CONFIG = /usr/bin/gtk-config
 GTK_LIBS = -L/usr/lib -L/usr/X11R6/lib -lgtk -lgdk -rdynamic -lgmodule -lglib -ldl -lXi -lXext -lX11 -lm
 LN_S = ln -s
-MAKEINFO = makeinfo
+MAKEINFO = /home/smct/trunk/greq/missing makeinfo
 PACKAGE = greq
 PKG_CONFIG = no
-VERSION = 0.9.5
+VERSION = 0.9.4
 bin_PROGRAMS = greq
-greq_SOURCES = greq.c check_button.c entry_field.c text_field.c okay_cancel.c 	       combo_field.c option_menu.c paned.c greq.h
+greq_SOURCES = greq.c check_button.c entry_field.c okay_cancel.c option_menu.c \
+combo_field.c text_field.c paned.c greq.h
 
 MOSTLYCLEANFILES = *~ *.s
 MAINTAINERCLEANFILES = Makefile.in stamp-h.in
@@ -88,8 +89,8 @@ PROGRAMS =  $(bin_PROGRAMS)
 DEFS = -DHAVE_CONFIG_H -I. -I$(srcdir) -I.
 CPPFLAGS = 
 LIBS = 
-greq_OBJECTS =  greq.o check_button.o entry_field.o text_field.o okay_cancel.o \
-combo_field.o option_menu.o paned.c
+greq_OBJECTS =  greq.o check_button.o entry_field.o okay_cancel.o \
+option_menu.o combo_field.o text_field.o paned.o
 greq_LDADD = $(LDADD)
 greq_DEPENDENCIES = 
 greq_LDFLAGS = 
