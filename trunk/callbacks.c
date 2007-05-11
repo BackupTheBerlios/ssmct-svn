@@ -7,6 +7,7 @@
 #include "callbacks.h"
 #include "interface.h"
 #include "support.h"
+#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 void cargar_file(char *name1, char *name2, char *name3,char *titulo,char ***ent);

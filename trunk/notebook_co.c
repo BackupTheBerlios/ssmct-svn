@@ -1,5 +1,6 @@
 /* example-start notebook notebook.c */
 
+#include <stdlib.h>
 #include <signal.h>
 #include <stdio.h>
 #include <gtk/gtk.h>

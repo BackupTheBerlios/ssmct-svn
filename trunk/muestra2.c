@@ -1,6 +1,8 @@
 /* this file is part of ssmct 
  * see ssmct.c for copyright information
  */
+#include <unistd.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 void generar_preguntas_resp(char **ar_preg,char **ar_resp,char *preguntas,char **ar_correctas);

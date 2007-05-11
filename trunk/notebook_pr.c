@@ -1,6 +1,7 @@
 /*
  example-start notebook notebook.c */
 
+#include<stdlib.h>
 #include<fcntl.h>
 #include<sys/socket.h>
 #include <stdio.h>

@@ -1,6 +1,7 @@
 /* this file is part of ssmct 
  * see ssmct.c for copyright information
  */
+#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <fcntl.h>

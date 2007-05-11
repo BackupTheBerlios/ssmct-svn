@@ -1,6 +1,8 @@
 /* this file is part of ssmct 
  * see ssmct.c for copyright information
  */
+#include <unistd.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 void prepara_elecc(char *trabajo,char *smct,char *ps, char c);
