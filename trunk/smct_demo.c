@@ -182,7 +182,7 @@ int sop_hasta[500],sop_desde[500];
  if(fp0==NULL) {puts (" * No puede abrir file en /tmp  *");exit(1); }
  hay_preg=0;
  while(fgets(st,BUFSIZ,fp0)) {
-         printf("%s",st);
+        // printf("%s",st);
 	 if(*st=='\n')
              hay_preg++;	
  }
@@ -480,13 +480,13 @@ for(i=0;ar_preg[i]!=NULL;i++) {
   for(j-=1;j>=0&&(contesta[j]==' '||contesta[j]=='\t');j--);
   contesta[j+1]='\0'; 
   strcpy(resp1,contesta);
-  printf("*%s*\n",resp1);
+  /*printf("*%s*\n",resp1);*/
  // cargar respuesta en array
   respuestas[i]=(char *)malloc(strlen(resp1)+1);
   strcpy(respuestas[i],resp1);
   if(larga) {
        ar_preg[i]=ar_preg[i]-2;
-       printf("!!!!%s!!!\n",ar_preg[i]);
+       /*printf("!!!!%s!!!\n",ar_preg[i]);*/
   }
     
 }
@@ -561,7 +561,7 @@ for(i=0;ar_preg[i]!=NULL;i++) {
    strcat(ejecuta,tit);
    strcat(ejecuta,ar_preg[i]);
    strcat(ejecuta,"\"");
-   printf("***%s***\n",ejecuta);
+   //printf("***%s***\n",ejecuta);
    fflush(stdout);
    //strcat(ejecuta,"\" -x'Tu respuesta'");
    fp1=popen(ejecuta,"r");
@@ -579,7 +579,7 @@ for(i=0;ar_preg[i]!=NULL;i++) {
    pclose(fp1);
  // cargar respuesta en array
    respuestas[i]=(char *)malloc(strlen(una_contesta)+1);
-   printf("--%d--%d\n",i,strlen(una_contesta));
+   //printf("--%d--%d\n",i,strlen(una_contesta));
    strcpy(respuestas[i],una_contesta);
 }
 respuestas[i]=NULL;

@@ -166,7 +166,7 @@ void last_text_default (gchar *text,gboolean palabra, gint cont)
    if (GTK_IS_TEXT(text1)) {
       if(palabra) {
        gtk_text_freeze(GTK_TEXT (text1));  // congelamos ya que puede
-                                       // haber varias insersiones
+                                       // haber varias inserciones
        coloreado=buscar_coloreada(text);
        if(coloreado==NULL) {
            gtk_text_insert ((GtkText*) text1,fixed_font,NULL,NULL,
@@ -175,7 +175,7 @@ void last_text_default (gchar *text,gboolean palabra, gint cont)
        }
        i=0;
        //gtk_text_freeze(GTK_TEXT (text1));  // congelamos ya que puede
-                                       // haber varias insersiones
+                                       // haber varias inserciones
        while(coloreado[i].dir) {
          if(coloreado[i].cual_color=='\0') {
            gtk_text_insert ((GtkText*) text1,fixed_font,NULL,NULL,
@@ -206,11 +206,12 @@ void last_text_default (gchar *text,gboolean palabra, gint cont)
          }
          i++;
         }
-      gtk_text_thaw(GTK_TEXT (text1));  // Redibuja -final de insersiones-
+      gtk_text_thaw(GTK_TEXT (text1));  // Redibuja -final de inserciones-
       }
       else {
+        gtk_text_freeze(GTK_TEXT (text1));  // congelamos
         gtk_text_insert ((GtkText*) text1,fixed_font,NULL,NULL, text,-1);
-        gtk_text_thaw(GTK_TEXT (text1));  // Redibuja -final de insersiones-
+        gtk_text_thaw(GTK_TEXT (text1));  // Redibuja -final de inserciones-
       }
    } else {
       fputs("ERROR: -z must be immediately preceeded by -x\n", stderr);
