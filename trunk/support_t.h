@@ -1,5 +1,6 @@
 /*
  * NO EDITE ESTE ARCHIVO - esta generado por Glade.
+ *
  */
 
 #ifdef HAVE_CONFIG_H
