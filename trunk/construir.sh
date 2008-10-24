@@ -1,4 +1,10 @@
 #!/bin/sh
+DIR=`pwd`
+cd $DIR/greq
+./configure && make
+echo "...instalando en /usr/local/bin"
+make install
+cd $DIR
 make -f Makefile1
 mv ssmct /usr/local/bin/ssmct
 make -f Makefile2
