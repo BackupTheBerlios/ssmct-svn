@@ -40,9 +40,9 @@ pkgincludedir = $(includedir)/greq
 
 top_builddir = ..
 
-ACLOCAL = /home/smct/trunk/greq/missing aclocal
+ACLOCAL = aclocal
 AUTOCONF = autoconf
-AUTOMAKE = /home/smct/trunk/greq/missing automake
+AUTOMAKE = automake
 AUTOHEADER = autoheader
 
 INSTALL = /usr/bin/install -c
@@ -68,7 +68,7 @@ GTK_CFLAGS = -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/incl
 GTK_CONFIG = /usr/bin/gtk-config
 GTK_LIBS = -L/usr/lib -L/usr/X11R6/lib -lgtk -lgdk -rdynamic -lgmodule -lglib -ldl -lXi -lXext -lX11 -lm
 LN_S = ln -s
-MAKEINFO = /home/smct/trunk/greq/missing makeinfo
+MAKEINFO = /home/smct/ssmct-trunk/greq/missing makeinfo
 PACKAGE = greq
 PKG_CONFIG = no
 VERSION = 0.9.4

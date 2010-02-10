@@ -25,6 +25,7 @@
 #include<netinet/in.h>
 #include<fcntl.h>
 #include<sys/wait.h>
+#include<limits.h>
 //void para_fin(int sig);
 void para_coor(int sig);
 void para_zombis(int sig);
